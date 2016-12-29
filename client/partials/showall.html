@@ -1,0 +1,17 @@
+<div ng-controller='userController'>
+      <table>
+        <tr>
+          <th> Name</th>
+          <th>Show</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+        <tr ng-repeat="user in users track by $index ">
+          <td>{{ user.firstName }} {{ user.lastName }} {{user._id}}</td>
+          <td><a href="#/show1/{{user._id}}">Show</a></td>
+          <td><a href="#/edit/{{user._id}}">Edit</a></td>
+          <td><button ng-click="remove(user._id);"> Remove User</button></td>
+        </tr>
+        <a href="#/new">New Friend</a>
+      </table>
+</div>

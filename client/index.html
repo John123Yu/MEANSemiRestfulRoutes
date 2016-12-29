@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <title></title>
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script type="text/javascript">
+        var myApp = angular.module('myApp', ['ngRoute']);
+    </script>
+    <script type="text/javascript" src = 'assets/factories/usersFactory.js'></script>
+    <script type="text/javascript" src = 'assets/controllers/indexController.js'></script>
+    <script type="text/javascript" src = 'assets/controllers/newController.js'></script>
+    <script type="text/javascript" src = 'assets/controllers ></script>
+<script>
+    myApp.config(function ($routeProvider) {
+      $routeProvider
+        .when('/',{
+            templateUrl: 'partials/showall.html',
+        })
+        .when('/show1/:id',{
+            templateUrl: 'partials/show1.html'
+        })
+        .when('/edit/:id',{
+            templateUrl: 'partials/edit.html'
+        })
+        .when('/new',{
+            templateUrl: 'partials/new.html'
+        })
+        .otherwise({
+          redirectTo: '/'
+        });
+    });
+
+    </script>
+  </head>
+  <body>
+    <div ng-app='myApp'>
+        <div ng-view="">
+        </div>
+    </div>
+  </body>
+</html>

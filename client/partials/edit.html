@@ -1,0 +1,9 @@
+<div ng-controller='editController'>
+      <form ng-submit = "editUser();">
+        First Name : <input type = "text"  value = '{{user.firstName}}' ng-model = 'user.firstName'>
+        Last Name : <input type = "text"  value = '{{user.lastName}}' ng-model = 'user.lastName' >
+        Birthday : <input type = "date"  value = '{{user.birthday}}' ng-model = 'user.birthday'>
+        <input type = "submit" value = "Edit User">
+      </form>
+<div>
+<div>
